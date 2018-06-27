@@ -1,0 +1,144 @@
+title: API Haulmer Tecnología
+version: v1
+protocols: [ HTTP ]R
+mediaType: application/json
+
+/api:
+	/login:
+		description: Verifica la existencia del usuario ingresado para generar token de ingreso
+  		post:
+  			body:
+  				application/json:
+  					example: { "mail" : "Maureen@gmail.com", "password" : "M2UTUH5KM48irdf" }
+  			responses:
+			  	201:
+			    	body:
+						application/json:
+							example: { "token": "eyJ0eOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MriOiJsdW1lbi1qd3QiLCJzdWIiOiIyIiwiaWF0IjoxNTtMwMTE3MTU3LCJleHAiOjE1MzAxMjA3NyTd9.5AKEGxJgGpMpVkLNER_cIID6FxaPq3m7Lf5Wkh8hP4c" }
+			    400:
+			    	body:
+						application/json:
+							example: { "error": "Correo electrónico no existe." }
+			    400:
+			    	body:
+						application/json:
+							example: { "error": "Password incorrecto." }
+	/new:
+		descripcion: Endpoint de creacion de usuarios
+		post:
+  			body:
+  				application/json:
+  					example: { "mail" : "Maureen@gmail.com", "password" : "M2UTUH5KM48irdf", "name" : "Maureen" }
+  			responses:
+			  	201:
+				  	description: Usuario registrado con éxito
+			    	body:
+						application/json:
+							example: { "success": "Usuario registrado con éxito." }
+			    400:
+			    	description: Email ya existe
+			    	body:
+						application/json:
+							example: { "error": "Correo electrónico ya existe." }
+			    400:
+			    	description: Error genérico final
+			    	body:
+						application/json:
+							example: { "error": "Ocurrió error al registrar el usuario." }
+							
+							
+	/me:
+		description: Endpoint de creación de usuarios
+		get:
+  			queryParameters:
+				token:
+					description: "Token de acceso entregada al realizar el login"
+					required: true
+					type: string
+  			responses:
+			  	201:
+			    	body:
+						application/json:
+							example: { "mail" : "Maureen@gmail.com", "password" : "M2UTUH5KM48irdf", "name" : "Maureen", "createdAt" : "2018-06-02 10:00:00" }
+			    401:
+			    	body:
+						application/json:
+							example: { "error": "Token no ingresada" }
+				400:
+			    	body:
+						application/json:
+							example: { "error": "Token expirada" }
+				400:
+			    	body:
+						application/json:
+							example: { "error": "Ocurrió un error mientras se procesaba el token." }
+				400:
+			    	body:
+						application/json:
+							example: { "error": "Token no válido" }
+				404:
+			    	body:
+						application/json:
+							example: { "error": "Usuario no existe" }
+		put:
+			queryParameters:
+				token:
+					description: "Token de acceso entregada al realizar el login"
+					required: true
+					type: string
+  			responses:
+			  	201:
+			    	body:
+						application/json:
+							example: { "success" : "Datos de usuario actualizados" }
+			    401:
+			    	body:
+						application/json:
+							example: { "error": "Token no ingresada" }
+				400:
+			    	body:
+						application/json:
+							example: { "error": "Token expirada" }
+				400:
+			    	body:
+						application/json:
+							example: { "error": "Ocurrió un error mientras se procesaba el token." }
+				400:
+			    	body:
+						application/json:
+							example: { "error": "Token no válido" }
+				404:
+			    	body:
+						application/json:
+							example: { "error": "Usuario no existe" }		
+		delete:
+			queryParameters:
+				token:
+					description: "Token de acceso entregada al realizar el login"
+					required: true
+					type: string
+  			responses:
+			  	201:
+			    	body:
+						application/json:
+							example: { "success" : "Datos de usuario eliminados." }
+			    401:
+			    	body:
+						application/json:
+							example: { "error": "Token no ingresada" }
+				400:
+			    	body:
+						application/json:
+							example: { "error": "Token expirada" }
+				400:
+			    	body:
+						application/json:
+							example: { "error": "Ocurrió un error mientras se procesaba el token." }
+				400:
+			    	body:
+						application/json:
+							example: { "error": "Token no válido" }
+				404:
+			    	body:
+						application/json:
+							example: { "error": "Usuario no existe" }	
