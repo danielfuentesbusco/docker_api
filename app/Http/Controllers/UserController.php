@@ -8,6 +8,13 @@ use GuzzleHttp\Client;
 
 class UserController extends Controller
 {
+	/*
+	 *	Registra un usuario nuevo en la base de datos (desde mockAPI)
+	 * 
+	 *	@access public
+	 *	@param json string
+	 *	@return http status y json string de acuerdo a resultado
+	 */
     public function new(Request $request)
     {
 		$client = new \GuzzleHttp\Client(['base_uri' => env('MOCKAPI_URL')]);
@@ -46,13 +53,24 @@ class UserController extends Controller
 		}
     }
     
-    
-    
+    /*
+	 *	Handler de la sesión del usuario, depende del tipo de método del request
+	 * 
+	 *	@access restricted
+	 *	@param json string with token (required)
+	 *	@return http status y json string con información del usuario de acuerdo a resultado
+	 */
     public function me(Request $request)
     {
 		$client = new \GuzzleHttp\Client(['base_uri' => env('MOCKAPI_URL')]);
-				
 		if ($request->isMethod('get')) {
+			/*
+			 *	Obtiene la información del usuario logueado
+			 * 
+			 *	@access restricted
+			 *	@param json string with token (required)
+			 *	@return http status y json string con información del usuario de acuerdo a resultado
+			*/
 			$response = $client->request('GET', 'users', [
 			    'query' => ['search' => $request->auth_mail]
 			]);
@@ -69,8 +87,14 @@ class UserController extends Controller
 			}
 	        
 	        return response()->json($response, 201);
-        
         } elseif ($request->isMethod('put')) {
+	        /*
+			 *	Actualiza la información del usuario logueado
+			 * 
+			 *	@access restricted
+			 *	@param json string with token (required) and user data
+			 *	@return http status y json string con información del usuario de acuerdo a resultado
+			*/
 	        $response = $client->request('GET', 'users', [
 			    'query' => ['search' => $request->auth_mail]
 			]);
@@ -96,6 +120,13 @@ class UserController extends Controller
 	            ], 404);
 			}  
 	    } elseif ($request->isMethod('delete')) {
+		    /*
+			 *	Elimina al usuario logueado desde la base de datos (mockAPI)
+			 * 
+			 *	@access restricted
+			 *	@param json string with token (required)
+			 *	@return http status y json string con información del usuario de acuerdo a resultado
+			*/
 		    $response = $client->request('GET', 'users', [
 		    	'query' => ['search' => $request->auth_mail]
 			]);

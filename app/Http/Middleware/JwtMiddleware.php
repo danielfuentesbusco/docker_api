@@ -9,6 +9,14 @@ use GuzzleHttp\Client;
 
 class JwtMiddleware
 {
+	/*
+	 *	Valida que el token utilizado sea valido, no haya expirado
+	 *	y esté relacionado a un usuario.
+	 * 
+	 *	@access public
+	 *	@param querystring token
+	 *	@return Endpoint requested
+	 */
     public function handle($request, Closure $next, $guard = null)
     {
         $token = $request->get('token');

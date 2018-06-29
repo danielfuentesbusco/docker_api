@@ -11,56 +11,45 @@ use GuzzleHttp\Client;
 
 class AuthController extends BaseController 
 {
-    /**
-     * The request instance.
-     *
-     * @var \Illuminate\Http\Request
-     */
     private $request;
-    /**
-     * Create a new controller instance.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return void
-     */
+ 
     public function __construct(Request $request) {
         $this->request = $request;
     }
-    /**
-     * Create a new token.
-     * 
-     * @param  \App\User   $user
-     * @return string
-     */
+ 
+	/*
+	 *	Genera el token de acceso con la librería JWT
+	 * 
+	 *	@access protected
+	 *	@param string $user_id
+	 *	@return token de acceso
+	*/
     protected function jwt($user_id) {
         $payload = [
-            'iss' => "lumen-jwt", // Issuer of the token
-            'sub' => $user_id, // Subject of the token
-            'iat' => time(), // Time when JWT was issued. 
-            'exp' => time() + 60*60 // Expiration time
+            'iss' => "lumen-jwt",
+            'sub' => $user_id,
+            'iat' => time(),
+            'exp' => time() + 60*60
         ];
         
-        // As you can see we are passing `JWT_SECRET` as the second parameter that will 
-        // be used to decode the token in the future.
         return JWT::encode($payload, env('JWT_SECRET'));
     } 
-    /**
-     * Authenticate a user and return the token if the provided credentials are correct.
-     * 
-     * @param  \App\User   $user 
-     * @return mixed
-     */
-    public function authenticate(User $user) {
+    
+    /*
+	 *	Genera el token de acceso con la librería JWT
+	 * 
+	 *	@access public
+	 *	@param string $mail, string $password
+	 *	@return token de acceso
+	*/    
+	public function authenticate(User $user) {
         $this->validate($this->request, [
             'mail'     => 'required|email',
             'password'  => 'required'
         ]);
         
-        // Find the user by email
-     
-        
         $client = new \GuzzleHttp\Client(['base_uri' => env('MOCKAPI_URL')]);
-				
+
 		$response = $client->request('GET', 'users', [
 		    'query' => ['search' => $this->request->mail]
 		]);
@@ -68,16 +57,12 @@ class AuthController extends BaseController
 		$response = json_decode($response->getBody(), true);
         
         if(isset($response) && count($response) < 1){
-            // You wil probably have some sort of helpers or whatever
-            // to make sure that you have the same response format for
-            // differents kind of responses. But let's return the 
-            // below respose for now.
             return response()->json([
                 'error' => 'Correo electrónico no existe.'
             ], 400);
         }
         
-        // Verify the password and generate the token
+        // Verificamos validez del password y generamos el token de acceso
         if (md5($this->request->password) == md5($response[0]["password"])) {
 	        $token = $this->jwt($response[0]["id"]);
 	        
@@ -92,7 +77,7 @@ class AuthController extends BaseController
                 'token' => $token
             ], 200);
         }
-        // Bad Request response
+        
         return response()->json([
             'error' => 'Password incorrecto.'
         ], 400);
