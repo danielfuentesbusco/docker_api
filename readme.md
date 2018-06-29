@@ -65,39 +65,39 @@ http://localhost:8000/api/me
 
 ## POST /login error
 
-![Prueba 1](https://github.com/danielfuentesbusco/haulmer_api/raw/master/test/images/test_01.png "POST /login error")
+![Prueba 1](https://raw.githubusercontent.com/danielfuentesbusco/haulmer_api/raw/master/test/images/test_01.png "POST /login error")
 
 ## POST /new success
 
-![Prueba 2](https://github.com/danielfuentesbusco/haulmer_api/raw/master/test/images/test_01.png "POST /new success")
+![Prueba 2](https://raw.githubusercontent.com/danielfuentesbusco/haulmer_api/raw/master/test/images/test_01.png "POST /new success")
 
 ## POST /login error
 
-![Prueba 3](https://github.com/danielfuentesbusco/haulmer_api/raw/master/test/images/test_01.png "POST /login error")
+![Prueba 3](https://raw.githubusercontent.com/danielfuentesbusco/haulmer_api/raw/master/test/images/test_01.png "POST /login error")
 
 ## GET /me error
 
-![Prueba 4](https://github.com/danielfuentesbusco/haulmer_api/raw/master/test/images/test_01.png "GET /me error")
+![Prueba 4](https://raw.githubusercontent.com/danielfuentesbusco/haulmer_api/raw/master/test/images/test_01.png "GET /me error")
 
 ## GET /me error
 
-![Prueba 5](https://github.com/danielfuentesbusco/haulmer_api/raw/master/test/images/test_01.png "GET /me error")
+![Prueba 5](https://raw.githubusercontent.com/danielfuentesbusco/haulmer_api/raw/master/test/images/test_01.png "GET /me error")
 
 ## GET /me success
 
-![Prueba 6](https://github.com/danielfuentesbusco/haulmer_api/raw/master/test/images/test_01.png "GET /me success")
+![Prueba 6](https://raw.githubusercontent.com/danielfuentesbusco/haulmer_api/raw/master/test/images/test_01.png "GET /me success")
 
 ## PUT /me success
 
-![Prueba 7](https://github.com/danielfuentesbusco/haulmer_api/raw/master/test/images/test_01.png "PUT /me success")
+![Prueba 7](https://raw.githubusercontent.com/danielfuentesbusco/haulmer_api/raw/master/test/images/test_01.png "PUT /me success")
 
 ## GET /me success
 
-![Prueba 8](https://github.com/danielfuentesbusco/haulmer_api/raw/master/test/images/test_01.png "GET /me success")
+![Prueba 8](https://raw.githubusercontent.com/danielfuentesbusco/haulmer_api/raw/master/test/images/test_01.png "GET /me success")
 
 ## DELETE /me success
 
-![Prueba 9](https://github.com/danielfuentesbusco/haulmer_api/raw/master/test/images/test_01.png "DELETE /me success")
+![Prueba 9](https://raw.githubusercontent.com/danielfuentesbusco/haulmer_api/raw/master/test/images/test_01.png "DELETE /me success")
 
 # Evidencias en video
 
