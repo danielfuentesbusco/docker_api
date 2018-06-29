@@ -6,7 +6,6 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update
 
 RUN apt-get -y upgrade && apt-get install dialog apt-utils -y && apt-get -y install apache2 
-#RUN apt-get -y upgrade && apt-get install dialog apt-utils -y
 RUN apt-get -y install php7.2 tzdata
 RUN apt-get -y install php7.2-mbstring php7.2-json php7.2-xmlrpc php7.2-curl php7.2-cli php7.2-intl php7.2-common php7.2-soap libapache2-mod-php7.2 libphp7.2-embed 
 
