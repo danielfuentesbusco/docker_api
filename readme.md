@@ -60,3 +60,45 @@ GET, PUT, DELETE
 http://localhost:8000/api/me
 
 ```
+
+# Evidencias en imagen
+
+## POST /login error
+
+![Prueba 1](test/images/test_01.png?raw=true "POST /login error")
+
+## POST /new success
+
+![Prueba 2](test/images/test_01.png?raw=true "POST /new success")
+
+## POST /login error
+
+![Prueba 3](test/images/test_01.png?raw=true "POST /login error")
+
+## GET /me error
+
+![Prueba 4](test/images/test_01.png?raw=true "GET /me error")
+
+## GET /me error
+
+![Prueba 5](test/images/test_01.png?raw=true "GET /me error")
+
+## GET /me success
+
+![Prueba 6](test/images/test_01.png?raw=true "GET /me success")
+
+## PUT /me success
+
+![Prueba 7](test/images/test_01.png?raw=true "PUT /me success")
+
+## GET /me success
+
+![Prueba 8](test/images/test_01.png?raw=true "GET /me success")
+
+## DELETE /me success
+
+![Prueba 9](test/images/test_01.png?raw=true "DELETE /me success")
+
+# Evidencias en video
+
+https://youtu.be/ncwDmsHFPsY
