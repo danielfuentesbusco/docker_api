@@ -65,39 +65,39 @@ http://localhost:8000/api/me
 
 ## POST /login error
 
-![Prueba 1](https://raw.githubusercontent.com/danielfuentesbusco/haulmer_api/master/test/images/test_01.png "POST /login error")
+![Prueba 1](https://s3.amazonaws.com/elasticbeanstalk-us-east-1-122864340064/test_01.png "POST /login error")
 
 ## POST /new success
 
-![Prueba 2](https://raw.githubusercontent.com/danielfuentesbusco/haulmer_api/master/test/images/test_01.png "POST /new success")
+![Prueba 2](https://s3.amazonaws.com/elasticbeanstalk-us-east-1-122864340064/test_02.png "POST /new success")
 
 ## POST /login error
 
-![Prueba 3](https://raw.githubusercontent.com/danielfuentesbusco/haulmer_api/master/test/images/test_01.png "POST /login error")
+![Prueba 3](https://s3.amazonaws.com/elasticbeanstalk-us-east-1-122864340064/test_03.png "POST /login error")
 
 ## GET /me error
 
-![Prueba 4](https://raw.githubusercontent.com/danielfuentesbusco/haulmer_api/master/test/images/test_01.png "GET /me error")
+![Prueba 4](https://s3.amazonaws.com/elasticbeanstalk-us-east-1-122864340064/test_04.png "GET /me error")
 
 ## GET /me error
 
-![Prueba 5](https://raw.githubusercontent.com/danielfuentesbusco/haulmer_api/master/test/images/test_01.png "GET /me error")
+![Prueba 5](https://s3.amazonaws.com/elasticbeanstalk-us-east-1-122864340064/test_05.png "GET /me error")
 
 ## GET /me success
 
-![Prueba 6](https://raw.githubusercontent.com/danielfuentesbusco/haulmer_api/master/test/images/test_01.png "GET /me success")
+![Prueba 6](https://s3.amazonaws.com/elasticbeanstalk-us-east-1-122864340064/test_06.png "GET /me success")
 
 ## PUT /me success
 
-![Prueba 7](https://raw.githubusercontent.com/danielfuentesbusco/haulmer_api/master/test/images/test_01.png "PUT /me success")
+![Prueba 7](https://s3.amazonaws.com/elasticbeanstalk-us-east-1-122864340064/test_07.png "PUT /me success")
 
 ## GET /me success
 
-![Prueba 8](https://raw.githubusercontent.com/danielfuentesbusco/haulmer_api/master/test/images/test_01.png "GET /me success")
+![Prueba 8](https://s3.amazonaws.com/elasticbeanstalk-us-east-1-122864340064/test_08.png "GET /me success")
 
 ## DELETE /me success
 
-![Prueba 9](https://raw.githubusercontent.com/danielfuentesbusco/haulmer_api/master/test/images/test_01.png "DELETE /me success")
+![Prueba 9](https://s3.amazonaws.com/elasticbeanstalk-us-east-1-122864340064/test_09.png "DELETE /me success")
 
 # Evidencias en video
 
