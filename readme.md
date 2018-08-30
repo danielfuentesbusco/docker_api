@@ -1,4 +1,4 @@
-# Dokcer / API
+# Docker / API
 
 El archivo [Dockerfile](Dockerfile) define los comandos necesarios para montar el servicio de API en cualquier host compatible con Docker.
 El archivo [apache-config.conf](apache-config.conf) define la configuración de apache para disponibilizar la API.
